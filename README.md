@@ -7,6 +7,6 @@ Resources:
 * Twilio library: https://www.twilio.com/docs/libraries/python
 
 Screens:
-![Alt text](/screens/first.png "Optional Title")
-![Alt text](/screens/first.png "Optional Title")
+![Alt text](/screens/first.png)
+![Alt text](/screens/second.png)
  
