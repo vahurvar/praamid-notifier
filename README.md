@@ -5,4 +5,8 @@ available tickets in www.praamid.ee. Features polling the site in given interval
 
 Resources:
 * Twilio library: https://www.twilio.com/docs/libraries/python
+
+Screens:
+![Alt text](/screens/first.png "Optional Title")
+![Alt text](/screens/first.png "Optional Title")
  
