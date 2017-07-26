@@ -1,6 +1,5 @@
-import urllib.request, json
-
-from modules import DateUtils
+import json
+import urllib.request
 
 
 class PraamidScraper:
@@ -10,16 +9,15 @@ class PraamidScraper:
             data = json.loads(url.read().decode())
             items = data["items"]
 
-            has_free = False
             for item in items:
                 free_spaces = int(item["capacities"]["sv"])
                 if free_spaces > 0:
                     datestring = item["dtstart"]
                     hour = int(datestring[11:13])
                     if int(start_hours) < hour < int(end_hours):
-                        print(datestring, free_spaces)
-                        response.append(DateUtils.get_date_from_string(datestring) + ": " + free_spaces)
-                        has_free = True
-            print("On vabu kohti: " + str(has_free))
+                        response.append(datestring[11:16] + ": " + str(free_spaces))
             return response
+
+    def parse_datestring_to_readable(self, string):
+        return string[0:10] + " " + string[11:16]
 
