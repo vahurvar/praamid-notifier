@@ -16,7 +16,7 @@ class PraamidScraper:
                     hour = int(datestring[11:13])
                     if int(start_hours) < hour < int(end_hours):
                         response.append(datestring[11:16] + ": " + str(free_spaces))
-            return response
+            return sorted(response)
 
     def parse_datestring_to_readable(self, string):
         return string[0:10] + " " + string[11:16]
